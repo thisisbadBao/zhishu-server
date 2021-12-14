@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhishu.hd.model.dao.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.zhishu.hd.model.dao.entity.User">
+    <id column="username" jdbcType="VARCHAR" property="username" />
+    <result column="userpassword" jdbcType="VARCHAR" property="userpassword" />
+    <result column="useraddr" jdbcType="VARCHAR" property="useraddr" />
+    <result column="usertel" jdbcType="VARCHAR" property="usertel" />
+    <result column="userjuris" jdbcType="BIT" property="userjuris" />
+  </resultMap>
+
+</mapper>

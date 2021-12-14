@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+    <!-- 导入配置文件的地址-->
+    <properties resource="application.properties"/>
+
+    <!-- jar 包地址-->
+    <classPathEntry location="F:\maven\MavenLib\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar"/>
+
+    <context id="context" targetRuntime="MyBatis3Simple">
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection connectionURL="${spring.datasource.url}"
+                        userId="${spring.datasource.username}"
+                        password="${spring.datasource.password}"
+                        driverClass="${spring.datasource.driverClass}"
+        />
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- 实体对象-->
+        <javaModelGenerator targetPackage="com.zhishu.hd.model.dao.entity"
+                            targetProject="src/main/java">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- 自动生成的 *Mapper.xml 文件存放路径 -->
+        <sqlMapGenerator targetPackage="mapper"
+                         targetProject="src/main/resources">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+
+        <!-- 自动生成的 *Mapper.java 存放路径 -->
+        <javaClientGenerator targetPackage="com.zhishu.hd.model.dao.mapper"
+                             type="XMLMAPPER" targetProject="src/main/java">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+
+        <!-- 这里就是每次要修改生成的表 -->
+        <table schema="zhishu"
+               tableName="book"
+               enableCountByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" enableUpdateByExample="true">
+        </table>
+        <table schema="zhishu"
+               tableName="orderlist"
+               enableCountByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" enableUpdateByExample="true">
+        </table>
+        <table schema="zhishu"
+               tableName="orderbook"
+               enableCountByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" enableUpdateByExample="true">
+        </table>
+        <table schema="zhishu"
+               tableName="user"
+               enableCountByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" enableUpdateByExample="true">
+        </table>
+
+    </context>
+</generatorConfiguration>
