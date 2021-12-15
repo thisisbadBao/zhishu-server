@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhishu.hd.model.dao.mapper.BookMapper">
+  <resultMap id="BaseResultMap" type="com.zhishu.hd.model.dao.entity.Book">
+    <id column="isbn" jdbcType="VARCHAR" property="isbn" />
+    <result column="bookname" jdbcType="VARCHAR" property="bookname" />
+    <result column="bookauthor" jdbcType="VARCHAR" property="bookauthor" />
+    <result column="bookprice" jdbcType="REAL" property="bookprice" />
+    <result column="bookremain" jdbcType="INTEGER" property="bookremain" />
+    <result column="bookrelease" jdbcType="DATE" property="bookrelease" />
+    <result column="bookstate" jdbcType="BIT" property="bookstate" />
+    <result column="bookpic" jdbcType="VARCHAR" property="bookpic" />
+    <result column="booknote" jdbcType="LONGVARCHAR" property="booknote" />
+  </resultMap>
+
+</mapper>

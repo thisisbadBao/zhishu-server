@@ -12,7 +12,7 @@ public interface BookMapper extends Mapper<Book> {
     @Select("select * from book where bookname='${bookName}' and bookauthor='${bookAuthor}' ")
     Book selectByNameAndAuthor(String bookName, String bookAuthor);
 
-    @Select("select * from book where bookname='${bookName}' ")
+    @Select("select * from book where bookname like '%${bookName}%' ")
     Book[] selectByName(String bookName);
 
     @Select("select * from book where isbn='${id}' ")

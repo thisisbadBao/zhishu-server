@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhishu.hd.model.dao.mapper.OrderlistMapper">
+  <resultMap id="BaseResultMap" type="com.zhishu.hd.model.dao.entity.Orderlist">
+    <id column="orderid" jdbcType="INTEGER" property="orderid" />
+    <result column="orderuser" jdbcType="VARCHAR" property="orderuser" />
+    <result column="ordertime" jdbcType="DATE" property="ordertime" />
+    <result column="orderstate" jdbcType="INTEGER" property="orderstate" />
+    <result column="orderprice" jdbcType="REAL" property="orderprice" />
+  </resultMap>
+
+</mapper>
